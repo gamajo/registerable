@@ -1,0 +1,27 @@
+{
+	"name"       : "gamajo/registerable",
+	"description": "A package for your WordPress core plugin, to allow registering post types and taxonomies",
+	"keywords"   : ["wordpress", "register", "custom post type", "custom taxonomy"],
+	"homepage"   : "http://github.com/gamajo/registerable",
+	"license"    : "GPL-2.0+",
+	"authors"    : [
+		{
+			"name"    : "Gary Jones",
+			"email"   : "gamajo@gamajo.com",
+			"homepage": "http://gamajo.com",
+			"role"    : "Developer"
+		}
+	],
+	"support"    : {
+		"issues": "https://github.com/gamajo/registerable/issues"
+	},
+	"require"    : {
+		"php": ">=5.4",
+		"ext-filter": "*"
+	},
+	"autoload"   : {
+		"psr-4": {
+			"Gamajo\\Registerable\\": "src"
+		}
+	}
+}
