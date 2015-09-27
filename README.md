@@ -43,7 +43,7 @@ add_action( 'init', 'prefix_mealplanner' );
 /**
  * Kickstart the Meal Planner plugin.
  */
-function dt_contracts() {
+function prefix_mealplanner() {
 	// Register Recipe Type taxonomy.
 	require plugin_dir_path( __FILE__ ) . 'src/Taxonomy_Recipe_Type.php'; // Or use an autoloader.
 	global $prefix_taxonomy_recipe_type;
