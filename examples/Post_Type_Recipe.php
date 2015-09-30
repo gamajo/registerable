@@ -19,7 +19,7 @@ use Gamajo\Registerable\Post_Type;
  * @package Meal_Planner
  * @author  Gary Jones
  */
-class Recipe extends Post_Type {
+class Post_Type_Recipe extends Post_Type {
 	/**
 	 * Post type ID.
 	 *
