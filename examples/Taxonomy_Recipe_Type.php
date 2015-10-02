@@ -37,7 +37,7 @@ class Taxonomy_Recipe_Type extends Taxonomy {
 	 * @return array Taxonomy default arguments.
 	 */
 	protected function default_args() {
-		$labels = [
+		$labels = array(
 			'name'                       => __( 'Recipe Types', 'meal-planner' ),
 			'singular_name'              => __( 'Recipe Type', 'meal-planner' ),
 			'menu_name'                  => __( 'Recipe Types', 'meal-planner' ),
@@ -54,9 +54,9 @@ class Taxonomy_Recipe_Type extends Taxonomy {
 			'add_or_remove_items'        => __( 'Add or remove recipe types', 'meal-planner' ),
 			'choose_from_most_used'      => __( 'Choose from the most used recipe types', 'meal-planner' ),
 			'not_found'                  => __( 'No recipe types found.', 'meal-planner' ),
-		];
+		);
 
-		$args = [
+		$args = array(
 			'labels'            => $labels,
 			'public'            => true,
 			'show_tagcloud'     => true,
@@ -64,7 +64,7 @@ class Taxonomy_Recipe_Type extends Taxonomy {
 			'rewrite'           => [ 'slug' => 'recipe_type' ],
 			'show_admin_column' => true,
 			'query_var'         => true,
-		];
+		);
 
 		return $args;
 	}

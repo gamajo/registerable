@@ -37,7 +37,7 @@ class Post_Type_Recipe extends Post_Type {
 	 * @return array Post type default arguments.
 	 */
 	protected function default_args() {
-		$labels = [
+		$labels = array(
 			'name'               => _x( 'Recipes', 'post type general name', 'meal-planner' ),
 			'singular_name'      => _x( 'Recipe', 'post type singular name', 'meal-planner' ),
 			'menu_name'          => _x( 'Recipes', 'admin menu', 'meal-planner' ),
@@ -52,16 +52,16 @@ class Post_Type_Recipe extends Post_Type {
 			'parent_item_colon'  => __( 'Parent Recipe:', 'meal-planner' ),
 			'not_found'          => __( 'No recipes found.', 'meal-planner' ),
 			'not_found_in_trash' => __( 'No recipes found in Trash.', 'meal-planner' ),
-		];
+		);
 
-		$supports = [
+		$supports = array(
 			'title',
 			'thumbnail',
 			'revisions',
 			'author',
-		];
+		);
 
-		$args = [
+		$args = array(
 			'labels'            => $labels,
 			'supports'          => $supports,
 			'public'            => true,
@@ -69,7 +69,7 @@ class Post_Type_Recipe extends Post_Type {
 			'rewrite'           => [ 'slug' => 'recipe' ],
 			'menu_position'     => 7,
 			'has_archive'       => 'recipes',
-		];
+		);
 
 		return $args;
 	}
@@ -86,7 +86,7 @@ class Post_Type_Recipe extends Post_Type {
 
 		$revision = $this->get_revision_input();
 
-		$messages = [
+		$messages = array(
 			0  => '', // Unused. Messages start at index 1.
 			1  => __( 'Recipe updated.', 'meal-planner' ),
 			2  => __( 'Custom field updated.', 'meal-planner' ),
@@ -105,7 +105,7 @@ class Post_Type_Recipe extends Post_Type {
 			10 => __( 'Recipe draft updated.', 'meal-planner' ),
 			'view'    => __( 'View recipe', 'meal-planner' ),
 			'preview' => __( 'Preview recipe', 'meal-planner' ),
-		];
+		);
 
 		$messages = $this->maybe_add_message_links( $messages, $post );
 
