@@ -15,7 +15,7 @@ The main code is under the `Gamajo\Registerable` namespace.
  * `Registerable` - interface for different things that are registerable. Methods include `register()`, `unregister()`, `set_args()` and `get_args()`.
  * `Post_Type` - abstract class for registering post types. Implements `Registerable`, so required methods say how a post type should be registered, unregistered and how arguments should be handled. Includes abstract methods for `default_args()` and `messages()` which will contain implementation for specific post types.
  * `Taxonomy` - abstract class for registering taxonomies.  Implements `Registerable`, so required methods say how a taxonomy should be registered, unregistered and how arguments should be handled. Includes abstract methods for `default_args()` which will contain implementation for specific taxonomies. There is a little duplication here between this and `Post_type` - either the `Registerable` could be changed from an interface to an abstract class to accommodate the common method implementations, or traits could be used if the minimum PHP version was increased from 5.2.
- 
+
 In the `examples` directory are some example implementations, under a `Gamajo\Meal_Planner` namespace.
  * `Post_Type_{post type}` e.g. `Post_Type_Recipe` - specific implementation of a post type, which extends `Gamajo\Registerable\Post_Type`. Only defines the `$post_type` property, and the `default_args()` and `messages()` methods.
  * `Taxonomy_{taxonomy}` e.g. `Taxonomy_Recipe_Type` - specific implementation of a taxonomy, which extends `Gamajo\Registerable\Taxonomy`. Only defines the `$taxonomy` property, and the `default_args()` method.
@@ -23,7 +23,7 @@ In the `examples` directory are some example implementations, under a `Gamajo\Me
 If you register multiple post types and taxonomies, you can see that only multiple classes that extend the abstract classes are needed, with specific details, creating immutable objects. The boilerplate of registering, unregistering and handling arguments don't need to be repeated.
 
 ## Requirements
- * PHP 5.2+
+ * PHP 5.3+
 
 ## Installation
 
