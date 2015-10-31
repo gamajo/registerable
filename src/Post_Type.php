@@ -2,12 +2,11 @@
 /**
  * Gamajo Post Type
  *
- * @package   Gamajo_Registerable
+ * @package   Registerable
  * @author    Gary Jones
  * @link      http://github.com/gamajo/registerable
  * @copyright 2015 Gary Jones, Gamajo Tech
  * @license   GPL-2.0+
- * @version   1.0.0
  */
 
 namespace Gamajo\Registerable;

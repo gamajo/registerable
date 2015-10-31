@@ -16,7 +16,7 @@ The main code is under the `Gamajo\Registerable` namespace.
  * `Post_Type` - abstract class for registering post types. Implements `Registerable`, so required methods say how a post type should be registered, unregistered and how arguments should be handled. Includes abstract methods for `default_args()` and `messages()` which will contain implementation for specific post types.
  * `Taxonomy` - abstract class for registering taxonomies.  Implements `Registerable`, so required methods say how a taxonomy should be registered, unregistered and how arguments should be handled. Includes abstract methods for `default_args()` which will contain implementation for specific taxonomies. There is a little duplication here between this and `Post_type` - either the `Registerable` could be changed from an interface to an abstract class to accommodate the common method implementations, or traits could be used.
  
-In the `examples` directory are some example implementations, under a `Gamajo\Meal_Planner` namespace.
+In the [`examples` directory](https://github.com/gamajo/registerable/tree/master/examples) are some example implementations, under a made-up `Gamajo\Meal_Planner` namespace.
  * `Post_Type_{post type}` e.g. `Post_Type_Recipe` - specific implementation of a post type, which extends `Gamajo\Registerable\Post_Type`. Only defines the `$post_type` property, and the `default_args()` and `messages()` methods.
  * `Taxonomy_{taxonomy}` e.g. `Taxonomy_Recipe_Type` - specific implementation of a taxonomy, which extends `Gamajo\Registerable\Taxonomy`. Only defines the `$taxonomy` property, and the `default_args()` method.
 
@@ -38,7 +38,7 @@ This isn't a WordPress plugin on its own, so the usual instructions don't apply.
 
 ## Usage
 
-The `examples` files are examples - concrete objects of a post type and taxonomy. The only thing you need to populate for each new post type or taxonomy are the default args, and the messages. At this point, we've only created a specific post type or taxonomy class - since the class isn't instantiated, WordPress won't actually register anything.
+The [`examples`](https://github.com/gamajo/registerable/tree/master/examples) files are examples - concrete objects of a post type and taxonomy. The only thing you need to populate for each new post type or taxonomy are the default args, and the messages. At this point, we've only created a specific post type or taxonomy class - since the class isn't instantiated, WordPress won't actually register anything.
 
 Once the classes exist, instantiating can be done with something like:
 
@@ -66,11 +66,11 @@ function prefix_mealplanner() {
 
 ## Contribute
 
-Issues and Pull Requests welcomed against the 'develop' branch. All code should follow the WordPress coding standards and be fully documented.
+Issues and Pull Requests welcomed against the `develop` branch. All code should follow the WordPress coding standards and be fully documented.
 
 ## License
 
-MIT, so feel free to amend and use in any personal or commercial projects.
+[MIT](LICENSE), so feel free to amend and use in any personal or commercial projects.
 
 ## Credits
 
